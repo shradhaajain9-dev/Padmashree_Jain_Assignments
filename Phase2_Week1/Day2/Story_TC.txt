@@ -1,0 +1,48 @@
+Test Case ID: TC_BE_001
+Title: Verify successful billing execution deposit refund
+Preconditions: User is logged in with an active account, deposit is available for refund
+Steps:
+1. Navigate to Billing Execution Deposit Refund
+2. Select the deposit to be refunded
+3. Confirm refund details
+4. Submit refund request
+Expected Result: Refund is processed successfully and confirmation is shown
+
+Test Case ID: TC_BE_002
+Title: Verify invalid deposit selection for refund
+Preconditions: User is logged in with an active account, no deposit is available for refund
+Steps:
+1. Navigate to Billing Execution Deposit Refund
+2. Attempt to select an invalid deposit
+3. Submit refund request
+Expected Result: Error message is displayed indicating no deposit available for refund
+
+Test Case ID: TC_BE_003
+Title: Verify refund amount validation
+Preconditions: User is logged in with an active account, deposit is available for refund
+Steps:
+1. Navigate to Billing Execution Deposit Refund
+2. Select the deposit to be refunded
+3. Enter an invalid refund amount (e.g. exceeding deposit amount)
+4. Submit refund request
+Expected Result: Error message is displayed indicating invalid refund amount
+
+Test Case ID: TC_BE_004
+Title: Verify refund failure due to insufficient balance
+Preconditions: User is logged in with an active account, deposit is available for refund but insufficient balance
+Steps:
+1. Navigate to Billing Execution Deposit Refund
+2. Select the deposit to be refunded
+3. Confirm refund details
+4. Submit refund request
+Expected Result: Error message is displayed indicating insufficient balance for refund
+
+Test Case ID: TC_BE_005
+Title: Verify refund cancellation
+Preconditions: User is logged in with an active account, refund request is in progress
+Steps:
+1. Navigate to Billing Execution Deposit Refund
+2. Select the refund request to be cancelled
+3. Confirm cancellation
+4. Submit cancellation request
+Expected Result: Refund request is cancelled successfully and confirmation is shown
